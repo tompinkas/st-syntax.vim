@@ -1,2 +1,27 @@
-# st-syntax.vim
-Vim syntax file for ST - Structured Text (language used in practice for PLC programming) defined by the IEC 61131-3 standard. 
+# Vim Syntax File for ST (Structured Text for PLC Programming) 
+This is very basic syntax file, a starting point for anybody, who wants to edit PLC programs in Vim. Anybody who would like to contribute is welcomed.
+
+## Installation
+* Download [stplc.vim](https://github.com/tompinkas/st-syntax.vim/edit/master/stplc.vim)
+* Copy it to the folder ~/.vim/syntax
+
+## Running
+### Manually
+When you open ST file in Vim, use commands
+
+```
+:set syntax=stplc
+:syntax on
+```
+
+### Automatically
+To highlight syntax automatically, set the file type in ~/.vimrc or /etc/vim/vimrc. For example, when exported from Beckhoff TwinCAT PLC Control IDE, files come with extension .EXP, thus .vimrc:
+```
+au BufNewFile,BufRead *.EXP set filetype=stplc
+```
+Similarly, B&R Automation Studio IDE save files with extension .st, so add to .vimrc:
+```
+au BufNewFile,BufRead *.st set filetype=stplc
+```
+
+
